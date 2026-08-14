@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A family storybook made with love from miles away."
+    />
+    <title>Waiting for You, Little One</title>
+
+<link rel="icon" href="images/icon.png" type="image/png" />
+
+<link rel="stylesheet" href="style.css" />
+    <script src="EDIT-HERE.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <div class="floating-cloud-layer" aria-hidden="true">
+      <span class="magic-cloud cloud-a"></span>
+      <span class="magic-cloud cloud-b"></span>
+      <span class="magic-cloud cloud-c"></span>
+      <span class="magic-cloud cloud-d"></span>
+    </div>
+<div class="site-frame"></div>
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <header class="site-header" id="siteHeader">
+      <button class="brand" type="button" data-go="home" aria-label="Back to the beginning">
+        <span class="moon-mark" aria-hidden="true">☾</span>
+        <span>our little story</span>
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Story chapters">
+        <button type="button" data-go="story">Our story</button>
+        <button type="button" data-go="journey">Pregnancy</button>
+        <button type="button" data-go="letters">My letter</button>
+        <button type="button" data-go="baby">Baby</button>
+        <button type="button" data-go="memories">Memories</button>
+      </nav>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+        aria-label="Open story menu"
+      >
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero" id="home">
+        <div class="hero-stars" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+        </div>
+        <div class="cloud cloud-one" aria-hidden="true"></div>
+        <div class="cloud cloud-two" aria-hidden="true"></div>
+
+        <div class="hero-copy">
+          <p class="eyebrow">A family story, written from miles away</p>
+          <h1>
+            <span id="openingTitleFirst"></span>
+            <em id="openingTitleSecond"></em>
+          </h1>
+          <p class="hero-quote" id="openingMessage"></p>
+          <p class="baby-coming">
+            <span id="heroBabyName"></span> · <span id="comingSoonText"></span>
+          </p>
+          <div class="hero-actions">
+            <button class="primary-button" type="button" data-go="story">
+              Begin our story <span>↓</span>
+            </button>
+            <button class="outline-button" id="songButton" type="button">
+              ♫ Play our song
+            </button>
+          </div>
+          <audio id="familySong" preload="none"></audio>
+        </div>
+
+        <div class="scroll-cue" aria-hidden="true"><span></span>turn the page</div>
+      </section>
+
+      <!-- CHAPTER I -->
+      <section class="paper-section chapter-intro" id="story">
+        <div class="reveal">
+          <p class="chapter-number">Chapter I</p>
+          <p class="kicker">Before we met you</p>
+          <h2>A tiny life.<br />A whole family waiting.</h2>
+          <p class="lead-copy">
+            We wished we could sit beside Mama, watch her bump grow, and count every kick
+            with her. Instead, love travelled through late-night calls, photographs, voice
+            notes, and a thousand little questions asked from far away.
+          </p>
+          <div class="distance-note">
+            <span id="familyCountry"></span>
+            <div class="flight-line"><i>✈</i></div>
+            <span id="sisterCountry"></span>
+          </div>
+          <blockquote>
+            “There were thousands of kilometres between us,<br />
+            but never between our hearts.”
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- FOUND OUT -->
+      <section class="found-out section-shell" aria-labelledby="foundTitle">
+        <div class="section-heading reveal">
+          <p class="kicker">The day everything changed</p>
+          <h2 id="foundTitle">The day we found out</h2>
+          <p id="foundOutStory"></p>
+        </div>
+
+        <div class="scrapbook-scene reveal">
+          <figure class="polaroid rotate-left">
+            <div id="firstUltrasoundMedia"></div>
+            <figcaption>our very first glimpse of you</figcaption>
+          </figure>
+
+          <article class="handwritten-card">
+            <span class="tape"></span>
+            <p id="foundOutQuote"></p>
+            <small>— a memory from your family</small>
+          </article>
+
+          <figure class="polaroid rotate-right">
+            <div id="firstFamilyMessageMedia"></div>
+            <figcaption>the message we read twice</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- PREGNANCY JOURNEY -->
+      <section class="journey-section" id="journey" aria-labelledby="journeyTitle">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <p class="chapter-number">Chapter II</p>
+            <p class="kicker">Growing</p>
+            <h2 id="journeyTitle">Nine months of little miracles</h2>
+            <p>Touch a month to open one page of the journey.</p>
+          </div>
+
+          <div class="month-tabs reveal" id="monthTabs" role="tablist"></div>
+
+          <article class="month-story reveal" id="monthStory" role="tabpanel">
+            <div class="month-photo-wrap">
+              <span class="paperclip" aria-hidden="true">⌁</span>
+              <div id="monthMedia"></div>
+            </div>
+            <div class="month-copy">
+              <p class="month-label" id="monthLabel"></p>
+              <h3 id="monthTitle"></h3>
+              <p class="baby-size">✦ <span id="monthBaby"></span></p>
+              <p class="month-memory" id="monthMemory"></p>
+              <div class="replace-note" id="monthNote"></div>
+              <div class="month-video" id="monthVideo"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- DISTANCE -->
+      <section class="distance-story" aria-labelledby="distanceTitle">
+        <div class="distance-orbit" aria-hidden="true"><i>✈</i></div>
+        <div class="section-shell distance-grid">
+          <div class="reveal">
+            <p class="chapter-number">Chapter III</p>
+            <p class="kicker">Loving you from far away</p>
+            <h2 id="distanceTitle">Love learned<br />how to travel.</h2>
+            <p id="distanceStory"></p>
+            <blockquote id="distanceQuote"></blockquote>
+          </div>
+
+          <div class="call-collage reveal">
+            <figure class="phone-frame">
+              <div class="phone-speaker"></div>
+              <div id="videoCallMedia"></div>
+              <figcaption>the call where everyone talked at once</figcaption>
+            </figure>
+            <figure class="mini-memory">
+              <div id="pregnancyUpdateMedia"></div>
+              <figcaption>sent from miles away · kept forever</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- MY LETTER -->
+      <section class="my-letter-section" id="letters" aria-labelledby="myLetterTitle">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <p class="chapter-number">Chapter IV</p>
+            <p class="kicker" id="myLetterKicker"></p>
+            <h2 id="myLetterTitle"></h2>
+            <p id="myLetterIntroduction"></p>
+          </div>
+
+          <div class="single-letter-wrap reveal">
+            <article class="opened-letter my-letter-card">
+              <div class="letter-corner" aria-hidden="true">✦</div>
+              <p class="letter-salutation" id="myLetterSalutation"></p>
+              <p id="myLetterMessage"></p>
+              <div id="myLetterPhoto"></div>
+              <footer>
+                <span id="myLetterClosing"></span>
+                <strong id="myLetterFrom"></strong>
+                <small id="myLetterRelationship"></small>
+              </footer>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PREDICTIONS -->
+      <section class="predictions-section" aria-labelledby="predictionsTitle">
+        <div class="section-shell predictions-layout">
+          <div class="predictions-intro reveal">
+            <p class="kicker">Before we met you…</p>
+            <h2 id="predictionsTitle">We made some predictions.</h2>
+            <p>Choose your answers now. One day, return and see who knew him best.</p>
+            <div class="doodle-arrow" aria-hidden="true">↝</div>
+          </div>
+          <form class="prediction-sheet reveal" id="predictionForm">
+            <div id="predictionQuestions"></div>
+            <button class="ink-button" id="savePredictions" type="submit">
+              Seal our predictions
+            </button>
+            <p class="local-note">Saved privately on this device.</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- NAME REVEAL -->
+      <section class="name-reveal" id="baby" aria-labelledby="nameTitle">
+        <div class="name-stars" aria-hidden="true">✦　·　✧　·　✦</div>
+        <div class="name-card reveal" id="nameCard">
+          <p class="chapter-number">A secret for later</p>
+
+          <div id="nameHidden">
+            <p>For months, we called you</p>
+            <h2 id="nameTitle">Baby…</h2>
+            <button id="revealName" type="button">Discover his name <span>✦</span></button>
+            <small>Keep this chapter hidden until his name is ready.</small>
+          </div>
+
+          <div id="nameShown" hidden>
+            <p>Hello, little one. Your name is</p>
+            <h2 id="fullName"></h2>
+            <em id="nickname"></em>
+            <div class="name-rule"></div>
+            <p class="name-meaning" id="nameMeaning"></p>
+            <button class="quiet-button" id="hideName" type="button">Hide the name again</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- BIRTH CHAPTER -->
+      <section class="birth-section" id="birthSection" aria-labelledby="birthTitle">
+        <div class="locked-chapter reveal" id="birthLocked">
+          <span class="lock-moon" aria-hidden="true">☾</span>
+          <p class="chapter-number">Chapter V</p>
+          <h2 id="birthTitle">A chapter waiting<br />to be written…</h2>
+          <p>This page will open on the day you arrive.</p>
+          <button id="unlockBirth" type="button">Unlock a preview</button>
+        </div>
+
+        <div class="section-shell birth-layout" id="birthUnlocked" hidden>
+          <div class="birth-photo rotate-left reveal">
+            <div id="firstBabyPhoto"></div>
+            <span class="birth-ribbon">hello, little boy</span>
+          </div>
+          <div class="birth-copy reveal">
+            <p class="chapter-number">Chapter V · The day you arrived</p>
+            <p class="kicker">We've been waiting for you</p>
+            <h2>Hello,<br /><span id="birthBabyName"></span>.</h2>
+            <p class="birth-story" id="birthStory"></p>
+            <dl class="birth-details">
+              <div><dt>Born</dt><dd id="birthDate"></dd></div>
+              <div><dt>Weight</dt><dd id="birthWeight"></dd></div>
+              <div><dt>Length</dt><dd id="birthLength"></dd></div>
+              <div><dt>Place</dt><dd id="birthHospital"></dd></div>
+            </dl>
+            <div id="birthVideo"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GALLERY -->
+      <section class="gallery-section" aria-labelledby="galleryTitle">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <p class="kicker">A scrapbook still growing</p>
+            <h2 id="galleryTitle">Tiny moments, kept forever</h2>
+            <p>Tap any photograph to bring the memory closer.</p>
+          </div>
+          <div class="gallery-scrapbook reveal" id="gallery"></div>
+        </div>
+      </section>
+
+      <!-- VOICES -->
+      <section class="voices-section" aria-labelledby="voicesTitle">
+        <div class="section-shell voices-layout">
+          <div class="reveal">
+            <p class="kicker">A family voice archive</p>
+            <h2 id="voicesTitle">Voices waiting<br />to meet you</h2>
+            <p>One day, he will hear exactly how loved he was before his first hello.</p>
+            <div class="sound-wave" aria-hidden="true">▂▅▃▇▄▆▂▅▇▃▆▄▂▇</div>
+          </div>
+          <div class="voice-list reveal" id="voiceList"></div>
+        </div>
+      </section>
+
+      <!-- FIRST HELLO -->
+      <section class="first-hello" aria-labelledby="helloTitle">
+        <div class="hello-window reveal">
+          <div class="call-toolbar">
+            <span></span><span></span><span></span>
+            <small>family video call · <span id="firstHelloDate"></span></small>
+          </div>
+          <div id="firstHelloMedia"></div>
+          <div id="firstHelloVideo"></div>
+        </div>
+        <div class="hello-copy reveal">
+          <p class="chapter-number">Our first hello</p>
+          <h2 id="helloTitle">The first time Auntie met you—even if it was through a screen.</h2>
+          <p id="firstHelloMemory"></p>
+          <span class="written-date">a memory waiting for its date</span>
+        </div>
+      </section>
+
+      <!-- SURPRISE -->
+      <section class="surprise-section" aria-labelledby="surpriseTitle">
+        <div class="surprise-ribbon" aria-hidden="true">
+          one more thing　·　one more thing　·　one more thing
+        </div>
+        <div class="reveal">
+          <p class="kicker">A secret ending for Mama</p>
+          <h2 id="surpriseTitle">For all the moments<br />we wished we were beside you.</h2>
+          <button class="surprise-button" id="openSurprise" type="button">
+            <span>▶</span> Open your surprise
+          </button>
+          <p class="surprise-note">Add your family video montage in EDIT-HERE.js.</p>
+        </div>
+      </section>
+
+      <!-- MILESTONES -->
+      <section class="milestones-section" id="memories" aria-labelledby="milestonesTitle">
+        <div class="section-shell">
+          <div class="section-heading centered reveal">
+            <p class="chapter-number">Chapter VI</p>
+            <p class="kicker">Our story begins</p>
+            <h2 id="milestonesTitle">The story continues</h2>
+            <p>Every little first becomes another page. Tap a milestone to mark it on this device.</p>
+          </div>
+          <div class="milestone-timeline reveal" id="milestoneTimeline"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="final-message">
+      <div class="final-stars" aria-hidden="true">✦　·　✦</div>
+      <blockquote>
+        “Until we can hold you ourselves,<br />
+        this little corner of the internet will hold our memories for us.”
+      </blockquote>
+      <p>With all our love,<strong>Your Family</strong><span>♡</span></p>
+      <button type="button" data-go="home">Return to the beginning ↑</button>
+    </footer>
+    </div>
+
+    <!-- PHOTO LIGHTBOX -->
+    <div class="modal" id="photoModal" role="dialog" aria-modal="true" hidden>
+      <button class="modal-close" type="button" data-close-modal aria-label="Close photograph">×</button>
+      <figure class="lightbox-card">
+        <div id="lightboxMedia"></div>
+        <figcaption id="lightboxCaption"></figcaption>
+      </figure>
+    </div>
+
+    <!-- SURPRISE VIDEO -->
+    <div class="modal surprise-modal" id="surpriseModal" role="dialog" aria-modal="true" hidden>
+      <button class="modal-close" type="button" data-close-modal aria-label="Close surprise">×</button>
+      <div class="montage-placeholder">
+        <p>Congratulations.</p>
+        <p>We wish we were there.</p>
+        <p>We love you.</p>
+        <p>We're so proud of you.</p>
+        <h2>You're going to be an incredible mother.</h2>
+        <div id="surpriseVideo"></div>
+        <footer id="surpriseFinalMessage"></footer>
+        
+      </div>
+    </div>
+  </body>
+</html>

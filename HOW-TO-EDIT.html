@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to Edit Your Baby Story Website</title>
+    <style>
+      :root { color-scheme: light; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f7f2e9; color: #40515d; font-family: Arial, sans-serif; line-height: 1.7; }
+      main { width: min(850px, calc(100% - 32px)); margin: 50px auto; padding: clamp(28px, 7vw, 70px); background: #fffdf8; box-shadow: 0 25px 70px rgba(63,75,82,.12); }
+      h1, h2 { font-family: Georgia, serif; font-weight: 400; }
+      h1 { margin-top: 0; font-size: clamp(40px, 7vw, 68px); line-height: 1.05; }
+      h2 { margin-top: 50px; color: #66879c; font-size: 30px; }
+      .intro { color: #6d7680; font-family: Georgia, serif; font-size: 20px; font-style: italic; }
+      .step { display: grid; grid-template-columns: 40px 1fr; gap: 13px; margin: 20px 0; }
+      .step > span { display: grid; width: 32px; height: 32px; place-items: center; border-radius: 50%; background: #7693a4; color: white; }
+      code, pre { font-family: Consolas, monospace; }
+      code { padding: 3px 6px; background: #edf2f2; }
+      pre { overflow-x: auto; padding: 18px; background: #304754; color: #f8f3e9; line-height: 1.5; }
+      .warning { margin-top: 40px; padding: 20px; border-left: 3px solid #b59a68; background: #f3ecde; }
+      a { color: #567b91; }
+      .home { display: inline-block; margin-top: 40px; padding: 12px 18px; border: 1px solid #66879c; text-decoration: none; }
+      @media (max-width: 500px) { main { margin: 16px auto; } }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>Simple HTML · CSS · JavaScript Edition</p>
+      <h1>How to edit your website</h1>
+      <p class="intro">You only need to edit one file: <strong>EDIT-HERE.js</strong>.</p>
+
+      <h2>1. Open the website</h2>
+      <div class="step"><span>1</span><p>Double-click <code>index.html</code>. It opens in your browser.</p></div>
+
+      <h2>2. Change a name or message</h2>
+      <div class="step"><span>1</span><p>Right-click <code>EDIT-HERE.js</code> and open it with Notepad or Visual Studio Code.</p></div>
+      <div class="step"><span>2</span><p>Change only the words between quotation marks.</p></div>
+      <pre>babyFullName: "Adam Fayaz",
+babyNickname: "Adam",</pre>
+      <div class="step"><span>3</span><p>Save the file, then refresh the website in your browser.</p></div>
+
+      <h2>3. Add pregnancy photographs</h2>
+      <div class="step"><span>1</span><p>Copy the photograph into the <code>images</code> folder.</p></div>
+      <div class="step"><span>2</span><p>Give it a simple name such as <code>month-5.jpg</code>.</p></div>
+      <div class="step"><span>3</span><p>Add its path in <code>EDIT-HERE.js</code>.</p></div>
+      <pre>photos: [
+  "images/month-5-a.jpg",
+  "images/month-5-b.jpg"
+],</pre>
+
+      <h2>4. Edit your one special letter</h2>
+      <p>Find <code>myLetter</code> in <code>EDIT-HERE.js</code>. Change its title, salutation, message, closing and name. You can also attach one photograph.</p>
+      <pre>myLetter: {
+  title: "For my sister",
+  salutation: "My dearest sister,",
+  message: "Write your letter here.",
+  photo: "images/our-sister-photo.jpg"
+},</pre>
+
+      <h2>5. Add video or audio</h2>
+      <p>Copy MP4 files into <code>videos</code> and MP3 files into <code>audio</code>.</p>
+      <pre>video: "videos/first-ultrasound.mp4",
+audio: "audio/grandma-message.mp3",</pre>
+
+      <h2>6. Show the birth chapter</h2>
+      <p>After the baby arrives, change this line in <code>EDIT-HERE.js</code>:</p>
+      <pre>babyHasArrived: true,</pre>
+
+      <h2>7. Share it</h2>
+      <p>Create a public repository on <a href="https://github.com">GitHub</a>, upload everything inside the website folder, then open <strong>Settings → Pages</strong>. Choose <strong>Deploy from a branch</strong>, <strong>main</strong> and <strong>/(root)</strong>. GitHub will give you a phone-friendly link.</p>
+
+      <div class="warning"><strong>Privacy reminder:</strong> A normal static website link may be opened by anyone who receives it. Add private access before uploading sensitive family photographs or videos.</div>
+
+      <a class="home" href="index.html">Open the baby website →</a>
+    </main>
+  </body>
+</html>
