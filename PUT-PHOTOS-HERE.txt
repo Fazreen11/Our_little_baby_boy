@@ -1,0 +1,12 @@
+Copy JPG, PNG or WebP photographs into this folder.
+
+Use short filenames without spaces, for example:
+
+  month-5.jpg
+  first-ultrasound.png
+  baby-first-photo.webp
+
+Then add the path in EDIT-HERE.js, for example:
+
+  photo: "images/month-5.jpg",
+
